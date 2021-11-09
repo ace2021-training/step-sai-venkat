@@ -1,0 +1,244 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: apply_for_role
+  examples: |
+    - I want to apply for Java role in your organization
+    - I would like to apply for the python role at your office
+    - Is it possible for me to apply for a MAS position in your company?
+    - I am wanting to apply as python employee at your company
+    - Is there an opening for the Java role at your your office for me to apply?
+    - I am applying for the MAS at you company
+    - I really want to apply for the Java position at your comapny
+    - Can I apply for the Python role at you company
+    - Can I apply as a MAS employee at your company?
+    - I am applying for the Java position at your organization
+
+- intent: input_for_username
+  examples: |
+    - My username is [svnallam](username)
+    - [snallam](username)
+    - The username is [lucifer1234](username)
+    - Username is [snallam1234](username)
+    - My username for this account is [snallam12345](username)
+    - It is [vnallam](username)
+    - I think it is [nallamv](username)
+    - It probably is [nallamsaiv](username)
+    - The username for this my account is [nallamv123](username)
+    - [nallamv12345](username) is the username for this account
+    - I believe it is [nallamsv1234](username)
+    - [vnallam789](username) is the username
+    - [vnallam789](username) is most likely the username
+    - Set the username as [12svnallam](username)
+    - Please set the username for this account as [12345nallam12](username)
+    - The username for this account will be [nallamsaivnv](username)
+    - Set it as [nallamveera](username)
+    - Use [nallamveera1](username)
+    - Do it as [nallasaiv](username)
+
+- intent: input_for_username_new
+  examples: |
+    - My username is [svnallam](username_new)
+    - [snallam](username_new)
+    - The username is [lucifer1234](username_new)
+    - Username is [snallam1234](username_new)
+    - My username for this account is [snallam12345](username_new)
+    - It is [vnallam](username_new)
+    - I think it is [nallamv](username_new)
+    - It probably is [nallamsaiv](username_new)
+    - The username for this my account is [nallamv123](username_new)
+    - [nallamv12345](username_new) is the username for this account
+    - I believe it is [nallamsv1234](username_new)
+    - [vnallam789](username_new) is the username
+    - [vnallam789](username_new) is most likely the username
+    - Set the username as [12svnallam](username_new)
+    - Please set the username for this account as [12345nallam12](username_new)
+    - The username for this account will be [nallamsaivnv](username_new)
+    - Set it as [nallamveera](username_new)
+    - Use [nallamveera1](username_new)
+    - Do it as [nallasaiv](username_new)
+
+- intent: input_for_password
+  examples: |
+    - My password is [12345](password)
+    - [snallam](password)
+    - The password is [lucifer1234](password)
+    - password is [snallam1234](password)
+    - My password for this account is [snallam12345](password)
+    - It is [vnallam](password)
+    - I think it is [nallamv](password)
+    - It probably is [nallamsaiv](password)
+    - The password for this my account is [nallamv123](password)
+    - [nallamv12345](password) is the password for this account
+    - I believe it is [nallamsv1234](password)
+    - [vnallam789](password) is the password
+    - [vnallam789](password) is most likely the password
+    - [whizquiz12345](password) is the passowrd for the username above
+    - The password for my username is [12345678](password)
+    - The password for the username provided above is [sixtyone61](password)
+    - Set the password as [12svnallam](password)
+    - Please set the password for this account as [12345nallam12](password)
+    - The password for this account will be [nallamsaivnv](password)
+    - Set it as [nallamveera](password)
+    - Use [nallamveera1](password)
+    - Set the password for this username as [129076](password)
+
+- intent: input_for_password_new
+  examples: |
+    - My password is [12345](password_new)
+    - [snallam](password_new)
+    - The password is [lucifer1234](password_new)
+    - password is [snallam1234](password_new)
+    - My password for this account is [snallam12345](password_new)
+    - It is [vnallam](password_new)
+    - I think it is [nallamv](password_new)
+    - It probably is [nallamsaiv](password_new)
+    - The password for this my account is [nallamv123](password_new)
+    - [nallamv12345](password_new) is the password for this account
+    - I believe it is [nallamsv1234](password_new)
+    - [vnallam789](password_new) is the password
+    - [vnallam789](password_new) is most likely the password
+    - [whizquiz12345](password_new) is the passowrd for the username above
+    - The password for my username is [12345678](password_new)
+    - The password for the username provided above is [sixtyone61](password_new)
+    - Set the password as [12svnallam](password_new)
+    - Please set the password for this account as [12345nallam12](password_new)
+    - The password for this account will be [nallamsaivnv](password_new)
+    - Set it as [nallamveera](password_new)
+    - Use [nallamveera1](password_new)
+    - Set the password for this username as [129076](password_new)
+
+- intent: input_for_reentered_password
+  examples: |
+    - My password is [svnallam](re_password)
+    - [snallam](re_password)
+    - The password is [lucifer1234](re_password)
+    - password is [snallam1234](re_password)
+    - My password for this account is [snallam12345](re_password)
+    - It is [vnallam](re_password)
+    - I think it is [nallamv](re_password)
+    - It probably is [nallamsaiv](re_password)
+    - The password for this my account is [nallamv123](re_password)
+    - [nallamv12345](re_password) is the password for this account
+    - I believe it is [nallamsv1234](re_password)
+    - [vnallam789](re_password) is the password
+    - [vnallam789](re_password) is most likely the password
+    - [whizquiz12345](re_password) is the passowrd for the username above
+    - The password for my username is [12345678](re_password)
+    - The password for the username provided above is [sixtyone61](re_password)
+    - Set the password as [12svnallam](re_password)
+    - Please set the password for this account as [12345nallam12](re_password)
+    - The password for this account will be [nallamsaivnv](re_password)
+    - Set it as [nallamveera](re_password)
+    - Use [nallamveera1](re_password)
+    - Set the password for this username as [129076](re_password)
+    - The password, again, is [198034](re_password)
+    - Again, the password is [19238293](re_password)
+    - The password is [nwidnkk](re_password) again
+  
+- intent: input_for_skillset
+  examples: |
+    - My skill set includes working at TCS for 10 years, coded in python for 6 years, and done 2 major projects
+    - I have worked at Apple for 5 years, specialized in Java, and completed my masters in computer science
+    - Complete python couses, worked in microsoft fo 7 years, and have been coding in C for 6 years
+
+- intent: input_for_job
+  examples: |
+    - [Junior Java](position_role)
+    - [Senior Java](position_role)
+    - [Junior Python](position_role)
+    - [Senior Python](position_role)
+    - [Junior MAS](position_role)
+    - [Senior MAS](position_role)
+
+- intent: goodbye
+  examples: |
+    - have a nice day
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - great
+    - alright
+    - Perfect
+    - Yes, please do it
+    - Do it
+    - I would like that
+    - Yes create an account
+    - Yes please create an account
+    - Yes please
+    - Please do it
+    - yep, create one
+
+- intent: input_for_name
+  examples: |
+    - My name is [Venkat](name)
+    - [John](name)
+    - It is [sandeep](name)
+    - The name is [king](name)
+    - Name is [Abraham](name)
+    - [Varshinee](name) is the name
+
+- intent: check_status
+  examples: |
+    - I would like to know the status of my application
+    - I want to know the status of my application
+    - What is the status of my application
+    - Can I know the status of my application?
+    - Status
+    - Status of my application
+    - Application Status
+  
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - no please
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - I this a bot?
+    - Who are you?
+    - Who is this?

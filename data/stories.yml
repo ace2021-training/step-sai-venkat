@@ -1,0 +1,120 @@
+version: "2.0"
+
+stories:
+
+- story: existing user application path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: apply_for_role
+  - action: utter_are_you_an_existing_user
+  - intent: affirm
+  - action: utter_username
+  - intent: input_for_username
+    entities:
+    - username: "nallamsv"
+  - action: utter_password
+  - intent: input_for_password
+    entities:
+    - password: "12345"
+  - action: action_login
+  - intent: input_for_job
+    entities:
+    - position_role: "Junior Java"
+  - action: utter_skillset
+  - intent: input_for_skillset
+  - action: action_add_under_job
+
+- story: non-existing user negative path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: apply_for_role
+  - action: utter_are_you_an_existing_user
+  - intent: deny
+  - action: utter_create_account
+  - intent: deny
+  - action: utter_non-user_thanks
+
+- story: non-existing user application path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: apply_for_role
+  - action: utter_are_you_an_existing_user
+  - intent: deny
+  - action: utter_create_account
+  - intent: affirm
+  - action: utter_username_new
+  - intent: input_for_username_new
+    entities:
+    - username_new: "nallamsv"
+  - action: utter_password_new
+  - intent: input_for_password_new
+    entities:
+    - password_new: "12345"
+  - action: utter_reenter_password
+  - intent: input_for_reentered_password
+    entities:
+    - re_password: "12345"
+  - action: utter_name
+  - intent: input_for_name
+    entities:
+    - name: "venkat"
+  - action: action_create
+
+
+- story: existing user status path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_status
+  - action: utter_are_you_an_existing_user
+  - intent: affirm
+  - action: utter_username
+  - intent: input_for_username
+    entities:
+    - username: "nallamsv"
+  - action: utter_password
+  - intent: input_for_password
+    entities:
+    - password: "12345"
+  - action: action_login_status_check
+
+- story: non-existing user status path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_status
+  - action: utter_are_you_an_existing_user
+  - intent: deny
+  - action: utter_create_account
+  - intent: affirm
+  - action: utter_username_new
+  - intent: input_for_username_new
+    entities:
+    - username_new: "nallamsv"
+  - action: utter_password_new
+  - intent: input_for_password_new
+    entities:
+    - password_new: "12345"
+  - action: utter_reenter_password
+  - intent: input_for_reentered_password
+    entities:
+    - re_password: "12345"
+  - action: utter_name
+  - intent: input_for_name
+    entities:
+    - name: "venkat"
+  - action: action_create
+
+- story: non-existing user status path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: check_status
+  - action: utter_are_you_an_existing_user
+  - intent: deny
+  - action: utter_create_account
+  - intent: deny
+  - action: utter_non-user_thanks

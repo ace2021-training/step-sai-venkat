@@ -1,0 +1,113 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - apply_for_role
+  - input_for_username
+  - input_for_username_new
+  - input_for_password
+  - input_for_password_new
+  - input_for_skillset
+  - input_for_job
+  - input_for_name
+  - check_status
+  - bot_challenge
+  - input_for_reentered_password
+
+entities:
+  - username_new
+  - password_new
+  - position_role
+  - name
+  - re_password
+  - username
+  - password
+
+slots:
+  username:
+    type: list
+    influence_conversation: false
+  password:
+    type: list
+    influence_conversation: false
+  position_role:
+    type: list
+    influence_conversation: false
+  name:
+    type: list
+    influence_conversation: false
+  re_password:
+    type: list
+    influence_conversation: false
+  username_new:
+    type: list
+    influence_conversation: false
+  password_new:
+    type: list
+    influence_conversation: false
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_name
+  - utter_are_you_an_existing_user
+  - utter_username
+  - utter_username_new
+  - utter_password
+  - utter_password_new
+  - action_login
+  - action_add_under_job
+  - utter_create_account
+  - action_create
+  - action_login_status_check
+  - utter_reenter_password
+  - utter_non-user_thanks
+  - utter_iamabot
+  - utter_skillset
+
+responses:
+  utter_greet:
+  - text: "Hey Buddy! How can I help you?"
+
+  utter_username_new:
+  - text: "Please enter a new username"
+
+  utter_password_new:
+  - text: "Please enter a new password"
+  
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_are_you_an_existing_user:
+  - text: "Are you an existing user?"
+
+  utter_username:
+  - text: "Please enter your username"
+
+  utter_reenter_password:
+  - text: "Please enter your password again"
+
+  utter_password:
+  - text: "Please enter your password"
+
+  utter_create_account:
+  - text: "Do you want me to create an account for you?"
+
+  utter_non-user_thanks:
+  - text: "No Problem! You can create an account any time at www.mywebsite.com."
+
+  utter_iamabot:
+  - text: "I am a bot for sirius"
+
+  utter_skillset:
+  - text: "Please enter your qualifications"
+
+  utter_name:
+  - text: "Please enter your name"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
